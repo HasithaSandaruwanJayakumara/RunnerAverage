@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RunnerDetailsSave;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,7 +22,7 @@ Route::get('/runnerDetails', function () {
 });
 
 
-Route::post('/runnerDetailsSave',[runnersDetailsStoreController::class,'submit',]);
+Route::post('/runnerDetailsSave',[RunnerDetailsSave::class,'submit',]);
 
 
 Route::get('/runnersReport',[reportController::class,'index','speed','duration'])->name('runnersReport');
