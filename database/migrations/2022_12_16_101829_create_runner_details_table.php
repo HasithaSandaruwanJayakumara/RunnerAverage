@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('runner_details', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->integer('radius');
+            $table->time('end_time');
+            $table->time('start_time');
+            $table->integer('laps');
             $table->timestamps();
         });
     }
