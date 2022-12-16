@@ -24,12 +24,26 @@
                         <th>Radius</th>
                         <th>Start Time</th>
                         <th>End Time</th>
-                        <th>Duration</th>
+                        <th>Duration (km)</th>
                         <th>Number Of Laps</th>
                     </tr>
 
+                    @for($x =0; $x < sizeof($runners); $x++)
+                    <tr>
+                        <td>{{ $runners[$x]->name }}</td>
+                        <td>{{ $speeds[$x] }}</td>
+                        <td>{{ $runners[$x]->radius }}</td>
+                        <td>{{ $runners[$x]->end_time }}</td>
+                        <td>{{ $runners[$x]->start_time }}</td>
+                        <td>{{ $durations[$x] }}</td>
+                        <td>{{ $runners[$x]->laps }}</td>
 
-                   
+
+                    </tr>
+                    @endfor
+
+
+
                       </table>
                 </div>
             </div>
