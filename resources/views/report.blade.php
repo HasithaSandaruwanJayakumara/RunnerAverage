@@ -10,13 +10,17 @@
 </head>
 <body>
     <div class="container">
+        <br>
+        <button type="button" class="btn btn-success" onclick="window.location='{{ url('/runnerDetails') }}'">Back</button>
         <div class="text-center">
             <br>
             <h1>Report</h1>
             <br>
 
             <div class="row">
+
                 <div class="col-md-10">
+
                     <table class="table table-dark table-striped">
                         <tr>
                         <th>Runner</th>
