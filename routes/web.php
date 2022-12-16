@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+
+
+Route::get('/runnerDetails', function () {
+    return view('index');
 });
+
+
+Route::post('/runnerDetailsSave',[runnersDetailsStoreController::class,'submit',]);
+
+
+Route::get('/runnersReport',[reportController::class,'index','speed','duration'])->name('runnersReport');
